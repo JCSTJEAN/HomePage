@@ -1,0 +1,238 @@
+/* CSS Document */
+/*div id = # div class = .*/
+
+body{
+	background-color:#FFF;
+	background-image:url(../assets/masterpage/tiles/whitegrit.jpg);
+	background-repeat:repeat;
+	background-attachment:fixed;
+}
+
+/*banner image for top and bottom banners*/
+IMG.banner{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	}
+
+IMG.logo{
+	background-color:#FFF;
+	}
+IMG.logo:hover{
+	background-color:#666;
+	opacity:.4;
+	}
+
+/*wrapper for top and bottom banners (includes links) */
+ .blockbanner {
+    background-color: #000;
+    clear: both;
+    float: left;
+    margin-left: 0;
+    width: 100%;
+    display: block;
+ }
+.blockmusicpage {
+    clear: both;
+    float: left;
+    margin-left: 0;
+    width: 100%;
+    height:auto;
+    display: block;
+}
+
+.h1text{
+	display:block;
+	color:#515151;
+	width:240px;
+	padding-left:15px;
+	font-size:36px;
+	font-family:QuickSand;
+	}
+
+/*/.textparagraph is now handled in fluid css toaccomidate the design 
+ * flaw with screen length and shrinking int he fluid design.
+ * its good to be able to toggle that info in the future.
+ */
+
+/*to edit the title and milestone block and prevent a spacing issue when running through fluid displays*/
+.titleAndMilestone{
+    display:block;
+    color:#FFF;
+    text-align:left;
+}
+
+.iframe{
+    max-width:inherit;
+}
+
+.copyright{
+    text-align:right;
+    color:#ffffff;
+    padding-right:20px;
+}
+		
+hr {
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;    
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+/*various header edits*/
+h3{
+	margin-left: 5%;
+	color:#999;
+	}
+/*various image edits*/
+.imgPost{
+    display:block;
+	max-width:100%;
+	margin-bottom:2%;
+    margin-left:auto;
+    margin-right:auto;
+	}
+/*various links*/
+
+iframe{
+    min-width:240px;
+    max-width:800px;
+}
+
+/*for specific <a href> links within the page that are not the header and footer (<h3> tags) this counts for all 3 class implementations*/
+.bodyHyperLink:link{
+	color:#FFF;
+	font-size:100%;
+	font-style:normal;
+	font-weight:bold;
+	text-decoration:none;
+	}
+.bodyHyperLink:visited{
+	color:inherit;
+	font-style:normal;
+	font-weight:bold;
+	text-decoration:none;
+	}
+.bodyHyperLink:hover{
+	color:#09F;
+	font-style:normal;
+	font-weight:bold;
+	text-decoration:none;
+	}
+
+/*code to format the navigation header and footer Usually used as a 2 parter between it and A:link*/
+.navigation{
+    text-align:center;
+	display:block;
+	background-color:#333;
+	color:#FFF;
+	font-family:Quicksand;
+    padding-bottom:3px;
+	}
+
+/*to format all links on the webpage unless specified different with the bodyHyperLink class mainly used for the header and footer*/
+A:link{
+	color:inherit;
+	font-size:170%;
+	font-style:normal;
+	font-weight:bold;
+	text-decoration:none;
+	}
+A:visited{
+	color:inherit;
+	font-style:normal;
+	font-size:170%;
+	font-weight:bold;
+	text-decoration:none;
+	}
+A:hover{
+	color:inherit;
+	font-style:normal;
+	font-weight:bold;
+	text-decoration:none;
+	}
+
+/*unordered lists and lists generic page code*/
+ul{
+  text-align:center;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+ul li{
+  color:#FFF;
+  font: bold 12px/18px sans-serif;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+
+  background: #333;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+ul li a{
+    display:block;
+      padding: 15px 20px;
+}
+
+ul li:hover {
+  color:#09F;
+  background: #555;
+  
+}
+
+
+ul li ul {
+  background-color:#333;
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+ul li ul li { 
+  
+  background: #555; 
+  display: block; 
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
+  z-index:1;
+}
+ul li ul li:hover { background: #666; color:#09F; }
+ul li:hover ul {
+  color:#09F;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
